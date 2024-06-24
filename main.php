@@ -29,22 +29,31 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
     </script>
 </head>
 <body>
+<div class="nav">
+    <div class="nav-items">
+        <div class="logo">
+            <h3>logo</h3>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="/GAZA/places.php">أهم المعالم</a></li>
+                <li><a href="#">التعليم والصحة</a></li>
+            </ul>
+        
+            <select id="service-select" onchange="checkTheService()">
+                <option value="" disabled selected>صفحة الخدمات</option>
+                <option value="electric-bill">فاتورة الكهرباء</option>
+                <option value="water-bill">فاتورة الماء</option>
+            </select>
+        </div>
+        <div class="login">
+            <a href="/GAZA/login.html">تسجيل الدخول</a>
+        </div>
+    </div>
+</div>
 
-<header>
-    <h1>الشعار</h1>
-</header>
 
-<nav>
-    <a href="#">الرئيسية</a>
-    <a href="/GAZA/places.php">أهم المعالم</a>
-    <a href="#">التعليم والصحة</a>
-    <select id="service-select" onchange="checkTheService()">
-        <option value="" disabled selected>صفحة الخدمات</option>
-        <option value="electric-bill">فاتورة الكهرباء</option>
-        <option value="water-bill">فاتورة الماء</option>
-    </select>
-    <a href="/GAZA/login.html">تسجيل الدخول</a>
-</nav>
 
 <footer>
     <p>© 2023 حقوق الطبع والنشر محفوظة</p>
