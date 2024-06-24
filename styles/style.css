@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 10px 0;
+}
+nav a, nav select {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+}
+nav a:hover, nav select:hover {
+    color: #007BFF;
+}
+nav select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
