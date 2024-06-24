@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+}
+
+.login {
+    border: 1px #025159 solid;
+    border-radius: 20px;
+    padding: 10px 5px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    direction: rtl;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.img-container {
+    width: 50%;
+    background: url('path/to/your/image.jpg') center center/cover no-repeat;
+}
+.form-container {
+    width: 50%;
+    background-color: #e6f4f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.form-container h1 {
+    margin-bottom: 20px;
+    color: #155e63;
+    font-size: 50px;
+}
+.form-container form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.form-container label {
+    margin-bottom: 5px;
+    color: #155e63;
+    font-size: 25px;
+}
+.form-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #025159;
+    border-radius: 20px;
+    height: 50px;
+    background-color: transparent;
+    font-size:20px ;
+}
+.form-container input[type="submit"] {
+    background-color: #155e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #0e4c4f;
+}
+.form-container p {
+    margin: 10px 0;
+}
+.form-container a {
+    color: #155e63;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.img-container {
+    background-image: url(../imgs/sea.jpg);
+    background-attachment: fixed;
+}

@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    direction: rtl;
+    background-color: #f0f4f8;
+}
+.login {
+    border: 1px #025159 solid;
+    border-radius: 20px;
+    padding: 10px 5px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.form-container {
+    width: 50%;
+    background-color: #e6f4f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.form-container h1 {
+    margin-bottom: 20px;
+    color: #155e63;
+    font-size: 50px;
+}
+.form-container form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.form-container label {
+    margin-bottom: 5px;
+    color: #155e63;
+    font-size: 25px;
+}
+.form-container input {
+    margin-bottom: 15px;
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #025159;
+    border-radius: 20px;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.form-container input[type="submit"] {
+    background-color: #155e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #0e4c4f;
+}
+.img-container {
+    width: 50%;
+    background: url('path/to/your/image.jpg') center center/cover no-repeat;
+    position: relative;
+}
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}

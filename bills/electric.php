@@ -34,21 +34,32 @@ if (!$result) {
     <h1>فاتورة الكهرباء</h1>
 </header>
 
-<nav>
-    <a href="../main-user.php">الرئيسية</a>
-    <a href="../places.php">أهم المعالم</a>
-    <a href="#">التعليم والصحة</a>
-    <select id="service-select" onchange="checkTheService()">
-        <option value="" disabled selected>صفحة الخدمات</option>
-        <option value="electric-bill">فاتورة الكهرباء</option>
-        <option value="water-bill">فاتورة الماء</option>
-    </select>
-    <select id="user-options" onchange="handleUserOptionsChange()">
-        <option value="" disabled selected><?php echo htmlspecialchars($_SESSION['username']); ?></option>
-        <option value="logout">تسجيل الخروج</option>
-        <option value="profile">صفحتي</option>
-    </select>
-</nav>
+<div class="nav">
+    <div class="nav-items">
+        <div class="logo">
+            <h3>logo</h3>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="/GAZA/places.php">أهم المعالم</a></li>
+                <li><a href="#">التعليم والصحة</a></li>
+            </ul>
+        
+            <select id="service-select" onchange="checkTheService()">
+                <option value="" disabled selected>صفحة الخدمات</option>
+                <option value="electric-bill">فاتورة الكهرباء</option>
+                <option value="water-bill">فاتورة الماء</option>
+            </select>
+        </div>
+        <div class="login">
+            <select id="user-options" onchange="handleUserOptionsChange()">
+                <option value="" disabled selected><?php echo htmlspecialchars($username); ?></option>
+                <option value="logout" >تسجيل الخروج</option>
+            </select>
+        </div>
+    </div>
+</div>
 
 <table border="1">
     <thead>

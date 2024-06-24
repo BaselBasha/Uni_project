@@ -16,7 +16,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/nav-fotter.css">
     <script>
     function handleUserOptionsChange() {
         const userOptions = document.getElementById('user-options');
@@ -30,7 +30,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     }
 
     function checkTheService() {
-        const services = document.getElementById('service-select'); // Corrected spelling
+        const services = document.getElementById('service-select');
         const selectedValue = services.value;
         if (selectedValue === 'electric-bill') {
             window.location.href = '/GAZA/bills/electric.php';
@@ -40,28 +40,35 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         services.selectedIndex = 0;
     }
 </script>
-
 </head>
 <body>
 
-<header>
-    <h1>الشعار</h1>
-</header>
-
-<nav>
-    <a href="#">الرئيسية</a>
-    <a href="/GAZA/places.php">أهم المعالم</a>
-    <a href="#">التعليم والصحة</a>
-    <select id="service-select" onchange="checkTheService()">
-        <option value="" disabled selected>صفحة الخدمات</option>
-        <option value="electric-bill">فاتورة الكهرباء</option>
-        <option value="water-bill">فاتورة الماء</option>
-    </select>
-    <select id="user-options" onchange="handleUserOptionsChange()">
-        <option value="" disabled selected><?php echo htmlspecialchars($username); ?></option>
-        <option value="logout" >تسجيل الخروج</option>
-    </select>
-</nav>
+<div class="nav">
+    <div class="nav-items">
+        <div class="logo">
+            <h3>logo</h3>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="/GAZA/places.php">أهم المعالم</a></li>
+                <li><a href="#">التعليم والصحة</a></li>
+            </ul>
+        
+            <select id="service-select" onchange="checkTheService()">
+                <option value="" disabled selected>صفحة الخدمات</option>
+                <option value="electric-bill">فاتورة الكهرباء</option>
+                <option value="water-bill">فاتورة الماء</option>
+            </select>
+        </div>
+        <div class="login">
+            <select id="user-options" onchange="handleUserOptionsChange()">
+                <option value="" disabled selected><?php echo htmlspecialchars(" مرحبا" . " , " . $username); ?></option>
+                <option value="logout">تسجيل الخروج</option>
+            </select>
+        </div>
+    </div>
+</div>
 
 <footer>
     <p>© 2023 حقوق الطبع والنشر محفوظة</p>
