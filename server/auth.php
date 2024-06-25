@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($password === $row['password']) {
             // Set session variables
             $_SESSION['loggedin'] = true;
-            $_SESSION['username'] = $row['f_name']; // or whatever column contains the username
+            $_SESSION['username'] = $row['first_name']; // or whatever column contains the username
             $_SESSION['user_id'] = $row['id']; // set the user_id in session
             // Redirect to the user main page
             header("Location: ../main-user.php");

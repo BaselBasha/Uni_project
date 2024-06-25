@@ -6,8 +6,8 @@
 .nav {
     display: flex;
     justify-content: center;
-    background-color: #ddd;
     padding: 20px 0;
+    background-color: #F3FEFF;
 }
 .nav-items {
     display: flex;
@@ -37,17 +37,28 @@
     cursor: pointer;
     appearance: none;
 }
-/* .nav a:hover, .nav select:hover {
-    color: #007BFF;
-} */
 .nav select {
     padding: 5px;
     border-radius: 5px;
+    width: 65px;
 }
 
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    padding: 10px 0; 
+    background-color: #025159;
+    color: #F3FEFF;
+}
+.contact-info {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+}
+.info p {
+    margin-bottom: 5px;
+    letter-spacing: 2px;
 }

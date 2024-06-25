@@ -33,10 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $location = mysqli_real_escape_string($conn, $location);
     $birth_date = mysqli_real_escape_string($conn, $birth_date);
     $email = mysqli_real_escape_string($conn, $email);
-    $password_hashed = password_hash($password, PASSWORD_DEFAULT); // Hash the password
 
     $sql = "INSERT INTO users (id, first_name, last_name, password, location, birth_date, email) 
-            VALUES ('$user_id', '$first_name', '$last_name', '$password_hashed', '$location', '$birth_date', '$email')";
+            VALUES ('$user_id', '$first_name', '$last_name', '$password', '$location', '$birth_date', '$email')";
 
     if (mysqli_query($conn, $sql)) {
         // Set the session variable for the username
