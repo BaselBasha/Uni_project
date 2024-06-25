@@ -60,7 +60,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
                 window.location.href = '/GAZA/login.html';
                 return;
             } else {
-                window.location.href = './GAZA/health.php';
+                window.location.href = './health.php';
             }
         }
 

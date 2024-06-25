@@ -1,0 +1,27 @@
+.nav a, .nav select {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #F3FEFF;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    appearance: none;
+}
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3FEFF;
+}
+.main-img {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background-image: url(../imgs/islamic-uni.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
