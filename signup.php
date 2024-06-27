@@ -6,6 +6,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/signup.css">
     <link rel="stylesheet" href="./styles/nav-fotter.css">
+
+    <script>
+        const loggedIn = <?php echo json_encode($loggedIn); ?>;
+
+        function checkTheService() {
+            const services = document.getElementById('service-select');
+            const selectedValue = services.value;
+
+            if (!loggedIn) {
+                window.location.href = '/GAZA/login.php';
+                return;
+            }
+
+            if (selectedValue === 'electric-bill') {
+                window.location.href = '/GAZA/bills/electric.php';
+            } else if (selectedValue === 'water-bill') {
+                window.location.href = '/GAZA/bills/water.php';
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="nav">
@@ -17,11 +37,12 @@
                 <ul>
                     <li><a href="#">الرئيسية</a></li>
                     <li><a href="/GAZA/places.php">أهم المعالم</a></li>
-                    <li><a href="#">التعليم والصحة</a></li>
+                    <li><a href="/GAZA/edu.php">التعليم</a></li>
+                    <li><a href="/Gaza/health.php">الصحة</a></li>
                 </ul>
             
                 <select id="service-select" onchange="checkTheService()">
-                    <option value="" disabled selected>صفحة الخدمات</option>
+                    <option value="" disabled selected>الخدمات</option>
                     <option value="electric-bill">فاتورة الكهرباء</option>
                     <option value="water-bill">فاتورة الماء</option>
                 </select>

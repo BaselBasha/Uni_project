@@ -19,7 +19,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة الرئيسية</title>
     <link rel="stylesheet" href="./styles/nav-fotter.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/service.css">
+    
+
     <script>
         const loggedIn = <?php echo json_encode($loggedIn); ?>;
 
@@ -46,39 +48,21 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
             services.selectedIndex = 0;
         }
 
-        function services() {
+        function electric() {
             if (!loggedIn) {
                 window.location.href = '/GAZA/login.html';
                 return;
             } else {
-                window.location.href = '/GAZA/services.php';
+                window.location.href = '/GAZA/bills/electric.php';
             }
         }
 
-        function health() {
+        function water() {
             if (!loggedIn) {
                 window.location.href = '/GAZA/login.html';
                 return;
             } else {
-                window.location.href = '/Gaza/health.php';
-            }
-        }
-
-        function edu() {
-            if (!loggedIn) {
-                window.location.href = '/GAZA/login.html';
-                return;
-            } else {
-                window.location.href = '/GAZA/edu.php';
-            }
-        }
-
-        function tourism() {
-            if (!loggedIn) {
-                window.location.href = '/GAZA/login.html';
-                return;
-            } else {
-                window.location.href = '/GAZA/places.php';
+                window.location.href = '/GAZA/bills/water.php';
             }
         }
     </script>
@@ -111,46 +95,23 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         </div>
     </div>
 </div>
-
-<div class="main-section">
-    <div class="main-img"> </div>
-    <div class="header">
-        <h1>اكتشف غزة</h1>
-    </div>
-    <div class="cards">
-        <div class="card" onclick="services()">
-            <img src="./imgs/hands.jpg" alt="" style= "width: 100%">
+<div class="cards">
+        <div class="card" onclick="electric()">
+            <img src="./imgs/electric.webp" alt="" style= "width: 100%">
             <div class="card__content">
-                <p class="card__title">خدمات المواطنين</p>
-                <p class="card__description">يقدم هذا القسم مجموعة من الخدمات للمواطنين مثل طلبات الوثائق الرسمية، الاستشارات القانونية، والمساعدة الاجتماعية، بهدف تلبية احتياجاتهم اليومية بسهولة ويسر.</p>
+                <p class="card__title">الكهرباء </p>
+                <p class="card__description"> هنا يمكنك عرض تاريخ فواتير الكهرباء الخاصة بك وحالتها الحالية، بالإضافة إلى معلومات حول استهلاك الكهرباء وأي تنبيهات أو إخطارات متعلقة بخدمات الكهرباء.</p>
             </div>
-            <h2>خدمات المواطنين</h2>
+            <h2> الكهرباء</h2>
         </div>
-        <div class="card" onclick="health()">
-            <img src="./imgs/hospital.jpg" alt="" style= "width: 93%">
+        <div class="card" onclick="water()">
+            <img src="./imgs/water1.webp" alt="" style= "width: 300px; height: 300px;">
             <div class="card__content">
-                <p class="card__title">القطاع الصحي</p>
-                <p class="card__description"> يحتوي هذا القسم على معلومات حول المرافق الصحية والخدمات الطبية المتاحة، بما في ذلك المستشفيات، العيادات، والخدمات الطبية الطارئة لضمان صحة وسلامة المواطنين.</p>
+                <p class="card__title">المياه</p>
+                <p class="card__description">هنا يمكنك عرض تاريخ فواتير المياه الخاصة بك وحالتها الحالية، بالإضافة إلى معلومات حول استهلاك المياه وأي تنبيهات أو إخطارات متعلقة بخدمات المياه.</p>
             </div>
-            <h2>القطاع الصحي</h2>
+            <h2> المياه</h2>
         </div>
-        <div class="card" onclick="edu()">
-            <img src="./imgs/uni.jpeg" alt="" style= "width: 105%">
-            <div class="card__content">
-                <p class="card__title">قطاع التعليم</p>
-                <p class="card__description">يوفر هذا القسم معلومات عن المؤسسات التعليمية، البرامج الأكاديمية، والمنح الدراسية المتاحة لدعم التعليم وتطوير المهارات بين جميع الفئات العمرية.</p>
-            </div>
-            <h2>قطاع التعليم</h2>
-        </div>
-        <div class="card" onclick="tourism()">
-            <img src="./imgs/basha.jpg" alt="" style= "width: 95%">
-            <div class="card__content">
-                <p class="card__title">أهم معالم غزة</p>
-                <p class="card__description">يعرض هذا القسم أبرز المعالم التاريخية والثقافية في غزة، بما في ذلك المتاحف، المواقع الأثرية، والمعالم السياحية التي تعكس تاريخ وثقافة المدينة العريق.</p>
-            </div>
-            <h2>أهم معالم غزة</h2>
-        </div>
-    </div>
 </div>
 
 <div class="footer">

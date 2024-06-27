@@ -31,7 +31,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
             <div class="nav-links">
                 <ul>
                     <li><a href="/GAZA/places.php">أهم المعالم</a></li>
-                    <li><a href="#">التعليم والصحة</a></li>
+                    <li><a href="/GAZA/edu.php">التعليم</a></li>
+                    <li><a href="/Gaza/health.php">الصحة</a></li>
                     <select id="service-select" onchange="checkTheService()">
                         <option value="" disabled selected>الخدمات</option>
                         <option value="electric-bill">فاتورة الكهرباء</option>
@@ -49,8 +50,52 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         </div>
     </div>
 
-    <div class="main-section">
-        <div class="img-sec"></div>
+    <div class="health-main-section">
+        <div class="img-sec">
+            <h1>مستشفيات قطاع غزة</h1>
+        </div>
+    </div>
+    <div class="hospitals">
+        <div class="hospital">
+            <div class="hospital-img hos-1"></div>
+            <div class="hospital-text">
+                <h1>
+                    المستشفى الاوروبي
+                </h1>
+                <p>المدينة: غزة</p>
+                <p>تواصل: +9705315312214</p>
+            </div>
+        </div>
+        <div class="hospital">
+            <div class="hospital-text">
+                <h1>
+                    مستشفى الشفاء الطبي
+                </h1>
+                <p>المدينة: غزة</p>
+                <p>تواصل: +9705315312214</p>
+            </div>
+            <div class="hospital-img hos-2"></div>
+        </div>
+        <div class="hospital">
+            <div class="hospital-img hos-3"></div>
+            <div class="hospital-text">
+                <h1>
+                    مستشفى الكويتي التخصصي
+                </h1>
+                <p>المدينة: رفح</p>
+                <p>تواصل: +9705315312214</p>
+            </div>
+        </div>
+        <div class="hospital">
+            <div class="hospital-text">
+                <h1>
+                     المستشفى الاندونيسي
+                </h1>
+                <p>المدينة: بيت لاهيا</p>
+                <p>تواصل: +9705315312214</p>
+            </div>
+            <div class="hospital-img hos-4"></div>
+        </div>
     </div>
 </body>
 </html>

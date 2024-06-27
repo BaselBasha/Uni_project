@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-image: url(../imgs/kuwaiti.jpg);
+    background-image: url(../imgs/bash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -53,18 +53,6 @@
     background-position: center;
     width: 50%;
 }
-.hos-1 {
-    background-image: url(../imgs/hos-1.jpg);
-}
-.hos-2 {
-    background-image: url(../imgs/hos-2.jpg);
-}
-.hos-3 {
-    background-image: url(../imgs/kuwaiti.jpg);
-}
-.hos-4 {
-    background-image: url(../imgs/hos-3.jpg);
-}
 .hospital-text {
     width: 50%;
     display: flex;
@@ -80,4 +68,17 @@
 }
 .hospital-text p{
     font-size: 30px;
+}
+
+.place-1 {
+    background-image: url(../imgs/basha.jpg);
+}
+.place-2 {
+    background-image: url(../imgs/omari.jpg);
+}
+.place-3 {
+    background-image: url(../imgs/port.jpg);
+}
+.place-4 {
+    background-image: url(../imgs/church.jpg);
 }

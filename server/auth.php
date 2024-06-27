@@ -2,6 +2,8 @@
 session_start();
 include 'databaseConn.php';
 
+$error_message = ''; // متغير لتخزين رسالة الخطأ
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = $_POST['user-id'];
     $password = $_POST['password'];
@@ -26,10 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../main-user.php");
             exit(); // Ensure no further code is executed after the redirect
         } else {
-            echo "Invalid login credentials";
+            $error_message = "بيانات الدخول غير صحيحة"; // تعيين رسالة الخطأ
         }
     } else {
-        echo "Invalid login credentials";
+        $error_message = "بيانات الدخول غير صحيحة"; // تعيين رسالة الخطأ
     }
     mysqli_close($conn);
 }

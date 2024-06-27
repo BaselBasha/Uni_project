@@ -75,7 +75,8 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
         <div class="nav-links">
             <ul>
                 <li><a href="/GAZA/places.php">أهم المعالم</a></li>
-                <li><a href="#">التعليم والصحة</a></li>
+                <li><a href="/GAZA/edu.php">التعليم</a></li>
+                <li><a href="/Gaza/health.php">الصحة</a></li>
                 <select id="service-select" onchange="checkTheService()">
                     <option value="" disabled selected>الخدمات</option>
                     <option value="electric-bill">فاتورة الكهرباء</option>
@@ -112,7 +113,7 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
             <h2>القطاع الصحي</h2>
         </div>
         <div class="card" onclick="edu()">
-            <img src="./imgs/uni.jpg" alt="" style="width: 105%">
+            <img src="./imgs/uni.jpeg" alt="" style="width: 105%">
             <div class="card__content">
                 <p class="card__title">قطاع التعليم</p>
                 <p class="card__description">يوفر هذا القسم معلومات عن المؤسسات التعليمية، البرامج الأكاديمية، والمنح الدراسية المتاحة لدعم التعليم وتطوير المهارات بين جميع الفئات العمرية.</p>

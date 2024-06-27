@@ -20,7 +20,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/nav-fotter.css">
-    <link rel="stylesheet" href="./styles/places.css">
+    <link rel="stylesheet" href="./styles/edu.css">
 
 </head>
 <body>
@@ -53,15 +53,15 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 
     <div class="health-main-section">
         <div class="img-sec">
-            <h1>أهم المعالم السياحية</h1>
+            <h1>المؤسسات التعليمية</h1>
         </div>
     </div>
     <div class="hospitals">
         <div class="hospital">
-            <div class="hospital-img place-1"></div>
+            <div class="hospital-img uni-1"></div>
             <div class="hospital-text">
                 <h1>
-                    قصر الباشا
+                     جامعة الأقصى
                 </h1>
                 <p>الموقع: غزة</p>
                 <p>تواصل: 059545454545</p>
@@ -70,18 +70,18 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         <div class="hospital">
             <div class="hospital-text">
                 <h1>
-                    المسجد العمري الكبير
+                    جامعة الأزهر
                 </h1>
                 <p>الموقع: غزة</p>
                 <p>تواصل: 059545454545</p>
             </div>
-            <div class="hospital-img place-2"></div>
+            <div class="hospital-img uni-2"></div>
         </div>
         <div class="hospital">
-            <div class="hospital-img place-3"></div>
+            <div class="hospital-img uni-3"></div>
             <div class="hospital-text">
                 <h1>
-                    ميناء غزة
+                     الجامعة الاسلامية
                 </h1>
                 <p>الموقع: غزة</p>
                 <p>تواصل: 059545454545</p>
@@ -90,12 +90,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         <div class="hospital">
             <div class="hospital-text">
                 <h1>
-                كنيسة الروم الأرثوذكس:
+                  جامعة الاسراء
                 </h1>
                 <p>الموقع: حي الزيتون</p>
                 <p>تواصل: 059545454545</p>
             </div>
-            <div class="hospital-img place-4"></div>
+            <div class="hospital-img uni-4"></div>
         </div>
     </div>
     <div class="footer" style="margin: 2% 0; padding: 30px">

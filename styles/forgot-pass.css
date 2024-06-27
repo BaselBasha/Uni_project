@@ -1,0 +1,11 @@
+body {
+    overflow: hidden;
+}
+
+.img-containerr {
+    background-color: red;
+    width: 50%;
+    background: url('../imgs/password.webp');
+    background-size: cover;
+    position: relative;
+}

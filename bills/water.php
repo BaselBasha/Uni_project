@@ -12,7 +12,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     exit();
 }
 
-// Query to get the water bills for the logged-in user
+// Query to get the electric bills for the logged-in user
 $sql = "SELECT * FROM water_bill WHERE user_id = '$user_id'";
 $result = mysqli_query($conn, $sql);
 
@@ -25,15 +25,17 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فاتورة الماء</title>
+    <title>فاتورة الكهرباء</title>
+    <link rel="stylesheet" href="./styles/signup.css">
     <link rel="stylesheet" href="../styles/nav-fotter.css">
+    <link rel="stylesheet" href="../styles/water.css">
+    <style>
+        text {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-
-<header>
-    <h1>فاتورة الماء</h1>
-</header>
-
 <div class="nav">
     <div class="nav-items">
         <div class="logo">
@@ -42,7 +44,8 @@ if (!$result) {
         <div class="nav-links">
             <ul>
                 <li><a href="/GAZA/places.php">أهم المعالم</a></li>
-                <li><a href="#">التعليم والصحة</a></li>
+                <li><a href="/GAZA/edu.php">التعليم</a></li>
+                <li><a href="/Gaza/health.php">الصحة</a></li>
                 <select id="service-select" onchange="checkTheService()">
                     <option value="" disabled selected>الخدمات</option>
                     <option value="electric-bill">فاتورة الكهرباء</option>
@@ -51,41 +54,32 @@ if (!$result) {
                 <li><a href="/GAZA/main-user.php">الرئيسية</a></li>
             </ul>
         </div>
-        <div class="login">
-            <select id="user-options" onchange="handleUserOptionsChange()">
+        <div class="login" style="border: none">
+            <select id="user-options" onchange="handleUserOptionsChange()" style="width: fit-content;">
                 <option value="" disabled selected><?php echo htmlspecialchars(" مرحبا" . " , " . $username); ?></option>
-                <option value="logout" >تسجيل الخروج</option>
+                <option value="logout">تسجيل الخروج</option>
             </select>
         </div>
     </div>
 </div>
-
-<table border="1">
-    <thead>
-        <tr>
-            <th>رقم الفاتورة</th>
-            <th>المبلغ</th>
-            <th>التاريخ</th>
-            <th>الحالة</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['water_bill_id']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['amount']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['date']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['status'] ? 'مدفوعة' : 'غير مدفوعة') . "</td>";
-            echo "</tr>";
-        }
-        ?>
-    </tbody>
-</table>
-
-<footer>
-    <p>© 2023 حقوق الطبع والنشر محفوظة</p>
-</footer>
+<div class="electric-container">
+    <div class="left"></div>
+    <div class="right">
+        <div class="title">
+            <h1>فاتورة الماء</h1>
+        </div>
+        <div class="data">
+            <?php
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<p>رقم الفاتورة: <span>" . htmlspecialchars($row['water_bill_id']) . "</span></p>";
+                echo "<p>المبلغ: <span>" . htmlspecialchars($row['amount']) . "</span></p>";
+                echo "<p>التاريخ: <span>" . htmlspecialchars($row['date']) . "</span></p>";
+                echo "<p>الحالة: <span>" . htmlspecialchars($row['status'] ? 'مدفوعة' : 'غير مدفوعة') . "</span></p>";
+            }
+            ?>
+        </div>
+    </div>
+</div>
 
 <script>
     function handleUserOptionsChange() {
@@ -95,7 +89,7 @@ if (!$result) {
         if (selectedValue === 'logout') {
             window.location.href = '/GAZA/server/logout.php';
         } else if (selectedValue === 'profile') {
-            window.location.href = '/GAZA/pages/profile.php';
+            window.location.href = 'profile.php';
         }
     }
 
@@ -107,7 +101,6 @@ if (!$result) {
         } else if (selectedValue === 'water-bill') {
             window.location.href = '/GAZA/bills/water.php';
         }
-        // Reset the select element to its default option
         services.selectedIndex = 0;
     }
 </script>
